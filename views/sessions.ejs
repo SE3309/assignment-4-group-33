@@ -1,0 +1,29 @@
+
+<% include partials/header.ejs %>
+<h2>Virtual Sessions</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Session ID</th>
+            <th>Trainer</th>
+            <th>Client Goals</th>
+            <th>Duration (mins)</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% sessions.forEach(session => { %>
+            <tr>
+                <td><%= session.SessionID %></td>
+                <td><%= session.TrainerName %></td>
+                <td><%= session.ClientGoals %></td>
+                <td><%= session.Duration %></td>
+                <td><%= session.DateOfSession %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<a href="/sessions/add" class="btn btn-primary">Book a Session</a>
+</div>
+</body>
+</html>

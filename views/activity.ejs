@@ -1,0 +1,33 @@
+
+<% include partials/header.ejs %>
+<h2>Activity Logs</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Log ID</th>
+            <th>User ID</th>
+            <th>Activity Type</th>
+            <th>Calories Burned</th>
+            <th>Date of Activity</th>
+            <th>Distance Traveled</th>
+            <th>Duration (mins)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% activities.forEach(activity => { %>
+            <tr>
+                <td><%= activity.LogID %></td>
+                <td><%= activity.UserID %></td>
+                <td><%= activity.ActivityType %></td>
+                <td><%= activity.CaloriesBurned %></td>
+                <td><%= activity.DateOfActivity %></td>
+                <td><%= activity.DistanceTraveled %></td>
+                <td><%= activity.Duration %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<a href="/activity/add" class="btn btn-primary">Add Activity Log</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<% include partials/header.ejs %>
+<h2>Nutrition Logs</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Log ID</th>
+            <th>User ID</th>
+            <th>Meal Name</th>
+            <th>Calories</th>
+            <th>Macronutrients</th>
+            <th>Category</th>
+            <th>Date Logged</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% logs.forEach(log => { %>
+            <tr>
+                <td><%= log.LogID %></td>
+                <td><%= log.UserID %></td>
+                <td><%= log.MealName %></td>
+                <td><%= log.CalorieCount %></td>
+                <td><%= log.Macronutrients %></td>
+                <td><%= log.MealCategory %></td>
+                <td><%= log.DateLogged %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<a href="/nutrition/add" class="btn btn-primary">Add Meal Log</a>
+</div>
+</body>
+</html>

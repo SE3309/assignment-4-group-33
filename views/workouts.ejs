@@ -1,0 +1,29 @@
+
+<% include partials/header.ejs %>
+<h2>Workout Plans</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Plan ID</th>
+            <th>Client Goals</th>
+            <th>Trainer</th>
+            <th>Plan Details</th>
+            <th>Frequency</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% plans.forEach(plan => { %>
+            <tr>
+                <td><%= plan.WorkoutPlanID %></td>
+                <td><%= plan.ClientGoals %></td>
+                <td><%= plan.TrainerName %></td>
+                <td><%= plan.WorkoutPlan %></td>
+                <td><%= plan.Frequency %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<a href="/workouts/add" class="btn btn-primary">Add Workout Plan</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+<% include partials/header.ejs %>
+<h2>Health Metrics</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Metric ID</th>
+            <th>User ID</th>
+            <th>BMI</th>
+            <th>Heart Rate</th>
+            <th>Sleep Quality</th>
+            <th>Body Fat (%)</th>
+            <th>Calories Burned Per Day</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% metrics.forEach(metric => { %>
+            <tr>
+                <td><%= metric.HealthMetricID %></td>
+                <td><%= metric.UserID %></td>
+                <td><%= metric.BMI %></td>
+                <td><%= metric.HeartRate %></td>
+                <td><%= metric.SleepQuality %></td>
+                <td><%= metric.BodyFat %></td>
+                <td><%= metric.CaloriesBurnedPerDay %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+<a href="/health/add" class="btn btn-primary">Update Health Metrics</a>
+</div>
+</body>
+</html>

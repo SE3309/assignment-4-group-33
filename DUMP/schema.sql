@@ -1,5 +1,5 @@
 
-USE healthHub-schema;
+USE healthub-schema;
 
 -- User Table
 CREATE TABLE User (
